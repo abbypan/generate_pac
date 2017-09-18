@@ -1,0 +1,16 @@
+adblockplus.org
+firefox.com
+getdropbox.com
+github.com
+github.io
+google-analytics.com
+google.com
+googleadservices.com
+googleapis.com
+googletagmanager.com
+googleusercontent.com
+gstatic.com
+gtimg.com
+mozilla.com
+oracle.com
+youtube.com
