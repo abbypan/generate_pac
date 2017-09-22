@@ -27,7 +27,7 @@ black 走socks5代理的域名列表文件，例如 *.google.com 域名
 
 # extract_new_dom.pl 
 
-本地域名抓包
+域名抓包
 
     sudo tcpdump port 53 -s0 -w dns53.pcap 
 
