@@ -40,3 +40,15 @@ black 走socks5代理的域名列表文件，例如 *.google.com 域名
 dom_grey.txt 灰名单，暂不写入pac文件的域名列表，多为访问次数较少的长尾域名
 
 检查生成的　dns53.pcap.dom.new.txt，人工决定加入dom_white/black/grey哪个文件。。。
+
+# generate_dnsmasq_conf.pl 
+
+dnsmasq相关配置参考：[dnsmasq_dnscrypt_configure](https://github.com/abbypan/dnsmasq_dnscrypt_configure)
+
+默认读入当前目录下的 dom_white.txt, dom_black.txt，生成dnsmasq的域名配置文件
+
+    perl generate_dnsmasq_conf [white_resolver] [black_resolver]
+
+    perl generate_dnsmasq_conf.pl 114.114.114.114 127.0.0.1:53330
+
+生成 dom_white.txt.conf, dom_black.txt.conf，并复制到/etc/dnsmasq.d目录下，重启dnsmasq
