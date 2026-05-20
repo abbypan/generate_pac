@@ -2,7 +2,6 @@ cn
 126.net
 163.com
 360buyimg.com
-51nb.com
 aliapp.org
 alibaba.com
 alicdn.com
@@ -16,7 +15,6 @@ baidustatic.com
 bdimg.com
 bdstatic.com
 bilibili.com
-changba.com
 dou.bz
 douban.com
 douban.fm
@@ -24,7 +22,6 @@ doubanio.com
 etao.com
 hao123.com
 hdslb.com
-ietf.org
 jd.com
 jiathis.com
 jjwxc.net
@@ -33,9 +30,6 @@ lecloud.com
 letv.com
 letvcloud.com
 lofter.com
-miaopai.com
-newsmth.net
-ourdvsss.com
 qihucdn.com
 qq.com
 qqmail.com
@@ -52,11 +46,7 @@ upqzfile.com
 upqzfilebk.com
 weibo.com
 weiyun.com
-xiami.com
-xiami.net
 xmcdn.com
 ykimg.com
-youdao.com
-zhaopin.com
 zhihu.com
 zhimg.com

@@ -11,19 +11,19 @@
 
 示例
 
-    perl generate_pac.pl [pac_fname] [socks_ip_port] [white] [black]
+    perl generate_pac.pl [pac_fname] [default_proxy] [white_dom_fname]
 
-    perl generate_pac.pl local.pac 127.0.0.1:8888 dom_white.txt dom_black.txt
+    perl generate_pac.pl local.pac 127.0.0.1:8080 dom_white.txt
 
 pac_fname 生成的目标pac文件
 
-socks_ip_port 本地socks5代理ip及端口
+默认走default proxy，在white_dom_fname里的走DIRECT
 
-white 不走socks5代理的域名列表文件，例如　*.cn 域名
+# generate_chain_pac.pl
 
-black 走socks5代理的域名列表文件，例如 *.google.com 域名
+    perl generate_chain.pac.pl [pac_fname] [default_proxy] [chain_proxy] [chain_dom_fname]
 
-默认走socks5代理
+默认走default proxy，在chain_dom_fname里的走chain proxy
 
 # extract_new_dom.pl 
 
