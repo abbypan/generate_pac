@@ -22,9 +22,20 @@ var chain_list = [
 $chain_info
 ];
 
-
 function FindProxyForURL(url, host) {
-    if(! host) return direct;
+    if(! host) return "DIRECT";
+
+  if (
+        host === "localhost" ||
+        dnsDomainIs(host, ".localhost") ||
+        host === "127.0.0.1" ||
+        shExpMatch(host, "127.*") ||
+        host === "::1" ||
+        host === "[::1]" ||
+        isPlainHostName(host)
+    ) {
+        return "DIRECT";
+    }
 
     for (var i = 0; i < chain_list.length; i += 1) {
         var v = chain_list[i];

@@ -2,12 +2,25 @@ var default_proxy = 'SOCKS5 127.0.0.1:8080; DIRECT';
 var chain_proxy = 'SOCKS5 127.0.0.1:8088; DIRECT';
 var chain_list = [
 "chatgpt.com",
-"openai.com"
+"openai.com",
+"oaistatic.com",
+"oaiusercontent.com"
 ];
 
-
 function FindProxyForURL(url, host) {
-    if(! host) return direct;
+    if(! host) return "DIRECT";
+
+  if (
+        host === "localhost" ||
+        dnsDomainIs(host, ".localhost") ||
+        host === "127.0.0.1" ||
+        shExpMatch(host, "127.*") ||
+        host === "::1" ||
+        host === "[::1]" ||
+        isPlainHostName(host)
+    ) {
+        return "DIRECT";
+    }
 
     for (var i = 0; i < chain_list.length; i += 1) {
         var v = chain_list[i];
