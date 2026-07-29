@@ -15,20 +15,19 @@ sub generate_pac {
 
     open my $fh, '>', $pac_fname;
     print $fh <<__DATA__;
-var direct = 'DIRECT';
 var default_proxy = 'SOCKS5 $default_proxy; DIRECT';
 var white_list = [
 $white_info
 ];
 
 function FindProxyForURL(url, host) {
-    if(! host) return direct;
+    if(! host) return "DIRECT";
 
     for (var i = 0; i < white_list.length; i += 1) {
         var v = white_list[i];
         var dotv = '.' + v;
         if ( dnsDomainIs(host, dotv) || dnsDomainIs(host, v)) {
-            return direct;
+            return "DIRECT";
         }
     }
 

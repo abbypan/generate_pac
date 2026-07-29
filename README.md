@@ -7,25 +7,25 @@
 
     apt-get install tcpdump tshark
 
-# generate_pac.pl
+# generate_pac_white.pl
 
 示例
 
-    perl generate_pac.pl [pac_fname] [default_proxy] [white_dom_fname]
+    perl generate_pac_white.pl [pac_fname] [default_proxy] [white_dom_fname]
 
-    perl generate_pac.pl local.pac 127.0.0.1:8080 dom_white.txt
+    perl generate_pac_white.pl local.pac 127.0.0.1:8080 dom_white.txt
 
 pac_fname 生成的目标pac文件
 
 默认走default proxy，在white_dom_fname里的走DIRECT
 
-# generate_chain_pac.pl
+# generate_pac_chain.pl
 
-    perl generate_chain.pac.pl [pac_fname] [default_proxy] [chain_proxy] [chain_dom_fname]
+    perl generate_pac_chain.pl [pac_fname] [default_proxy] [chain_proxy] [chain_dom_fname]
 
 默认走default proxy，在chain_dom_fname里的走chain proxy
 
-# extract_new_dom.pl 
+# extract_dom_pcap.pl 
 
 域名抓包
 
@@ -33,9 +33,9 @@ pac_fname 生成的目标pac文件
 
 示例
 
-    perl extract_new_dom.pl [dom_pcap] [white] [black] [grey]
+    perl extract_dom_pcap.pl [dom_pcap] [white] [black] [grey]
 
-    perl extract_new_dom.pl dns53.pcap dom_white.txt dom_black.txt dom_grey.txt
+    perl extract_dom_pcap.pl dns53.pcap dom_white.txt dom_black.txt dom_grey.txt
 
 dom_grey.txt 灰名单，暂不写入pac文件的域名列表，多为访问次数较少的长尾域名
 
